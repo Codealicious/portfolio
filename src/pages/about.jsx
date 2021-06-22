@@ -23,9 +23,7 @@ const About = () => {
                 </div>
             </div>
             <div className="lists">
-                <div onClick={toggle} className="lists__button">
-                    &rarr;
-                </div>
+                <span className="lists__button" onClick={toggle}>&rarr;</span>
                 <div className="list__container list--selected">
                     <h2 className="list__headline dev">Tools / Frameworks</h2>
                     <ul className="list">

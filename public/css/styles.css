@@ -232,11 +232,15 @@ li {
     display: none;
     top: 2.5rem;
     right: 1rem;
-    font-size: 4rem; }
+    font-size: 4rem;
+    cursor: pointer; }
     @media (min-width: 600px) {
       .lists__button {
         display: block;
-        position: absolute; } }
+        position: absolute;
+        height: 5rem;
+        width: 5rem;
+        z-index: 1; } }
 
 .list {
   font-family: 'Space Mono', monospace;
