@@ -193,6 +193,8 @@ li {
     letter-spacing: 2px;
     font-size: 4rem;
     padding-left: 5rem; }
+  #project h3 {
+    padding: 1rem; }
   #project .try-it {
     position: absolute;
     right: 3rem;
