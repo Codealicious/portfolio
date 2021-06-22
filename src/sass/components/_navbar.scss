@@ -9,7 +9,7 @@
     &__button {
         position: fixed;
         top: 3rem;
-        right: 3rem;
+        right: 3.5rem;
         height: 7rem;
         width: 7rem;
         border-radius: 50%;
@@ -24,7 +24,7 @@
     &__background {
         position: fixed;
         top: 3.5rem;
-        right: 3.5rem;
+        right: 4rem;
         height: 6rem;
         width: 6rem;
         border-radius: 50%;
@@ -62,7 +62,7 @@
     }
 
     &__checkbox:checked ~ &__background {
-        transform: scale(20.5);
+        transform: scale(21);
     }
 
     &__checkbox:checked ~ &__nav {

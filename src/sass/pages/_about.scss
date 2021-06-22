@@ -1,128 +1,133 @@
 
 .img-container {
-    position: absolute;
-    height: 8rem;
-    width: 26.5rem;
-    
-    &--top {
-        top: 15rem;
-        left: 7rem;
-        transform: skew(-45deg);
-        background: linear-gradient(90deg, rgb(252, 13, 80) 87%, $background);
+
+    width: 100%;
+
+    @include device-style(phone_portrait) {
+        position: absolute;
+        width: fit-content;
+        top: 8rem;
+        left: 6rem;
+    }
+
+    &__top {   
+        background-color: rgb(252,13,80);
 
         @include device-style(phone_portrait) {
-            top: 14rem;
-        }
-
-        & img {
-            margin-left: -.5rem;
-            height: 8rem;
-            width: 22rem;
-            transform: skew(45deg);
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
         }
     }
 
-    &--bottom{
-        top: 23rem;
-        left: 7rem;
-        background: linear-gradient(90deg, rgb(59, 201, 215) 87%, $background);
-        transform: skew(45deg);
+    &__bottom {  
+        background-color: rgb(59,201,215);
 
         @include device-style(phone_portrait) {
-            top: 22rem;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
         }
+    }
+
+
+    &__top, &__bottom {
+
+        padding: 1rem;
+
+        @include device-style(phone_portrait) {
+            position: relative;
+            padding: 0;
+            height: 12rem;
+            width: 25rem;
+        }
+    }
+
+    &__img { 
+
+        width: 20rem;
+
+        @include device-style(phone_portrait) {
+            width: 17rem;
+            @include position-center;
+        }
+    }
+
     
-        & img {
-            margin-top: 1rem;
-            height: 6rem;
-            width: 22rem;
-            transform: skew(-45deg);
+}
+
+.lists {
+    color: white;
+    padding-top: 5rem;
+
+    @include device-style(phone_portrait) {
+        position: absolute;
+        padding-top: 0;
+        height: 36rem;
+        width: 36rem;
+        top: 10rem;
+        right: 1rem;
+    }
+
+    &__button {
+        display: none;
+        top: 2.5rem;
+        right: 1rem;
+        font-size: 4rem;
+
+        @include device-style(phone_portrait) {
+            display: block;
+            position: absolute;
         }
     }
 }
 
 .list {
-    width: 30rem;
-    margin-left:2rem;
-    color: white;
+
+    font-family: 'Space Mono', monospace;
+    text-transform: uppercase;
+    margin-left: 2rem;
+    width: 34rem;
+
+    & li {
+        display: inline-block;
+        width: 11rem;
+        margin: .5rem 0;
+    }
+
+    & span {
+        text-transform: none;
+        font-variant: small-caps;
+    }
 
     &__container {
-        position: absolute;
-        left: 4rem;
-        width: 32rem;
+        width: 36rem;
+        margin: 3rem auto;
+        font-family: 'Staatliches', cursive;
+        font-size: 2rem;
+        letter-spacing: .2rem;
 
         @include device-style(phone_portrait) {
+            position: absolute;
             opacity: 0;
         }
     }
 
     &__headline {
-        color: white;
-        font-family: 'Staatliches', cursive;
-        font-size: 2.5rem;
-        letter-spacing: 2px;
-        border-bottom: white 3px solid;
-    }
-
-    & li {
-        display: inline-block;
-        font-family: 'Space Mono', monospace;
-        text-transform: uppercase;
-        width: 9rem;
-        font-size: 2rem;
-        margin: 1rem 1rem 1rem 0;
-        
-        & span {
-            text-transform: none;
-            font-variant: small-caps;
-        }
-    }
-
-    &__button {
-        position: absolute;
-        display: inline-block;
-        top: 15.5rem;
-        right: 5.5rem;
-        color: white;
-        display: none;
-        font-size: 3rem;
-
-        @include device-style(phone_portrait) {
-            display: inline-block;
-        }
+        border-bottom: 3px solid white;
     }
 }
 
 .dev {
-    top: 34.5rem;
-
-    @include device-style(phone_portrait) {
-        top: 16rem;
-        left: 36rem;
-    }
-
-    &__headline {
-        padding-left: 2rem;
-    }
+    padding-left: 2rem;
 }
 
 .languages {
-    top: 50rem;
+    text-align: right;
+    padding-right: 2rem;
 
     @include device-style(phone_portrait) {
-        top: 16rem;
-        left: 36rem;
-    }
-
-    &__headline {
-        text-align: right;
-        padding-right: 2rem;
-
-        @include device-style(phone_portrait) {
-            text-align: left;
-            padding-right: 0;
-            padding-left: 2rem;
-        }
+       text-align: left;
+       padding-right: 0;
+       padding-left: 2rem;
     }
 }
 
