@@ -1,0 +1,17 @@
+
+.name {
+    position: absolute;
+    top: 80%;
+    width: 100%;
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 5rem;
+    color: white; 
+
+    @include device-style(phone_portrait) {
+        top: 60%;
+        right: 0;
+        width: fit-content;
+        padding-right: 5rem;
+    }
+}

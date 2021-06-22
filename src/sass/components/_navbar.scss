@@ -1,0 +1,119 @@
+.navigation {
+
+    font-family: 'Staatliches', cursive;
+
+    &__checkbox {
+        display: none;
+    }
+
+    &__button {
+        position: fixed;
+        top: 3rem;
+        right: 3rem;
+        height: 7rem;
+        width: 7rem;
+        border-radius: 50%;
+        background-color: white;
+        z-index: 3;
+
+        @include device-style(phone_portrait) {
+            top: 2rem;
+        }
+    }
+
+    &__background {
+        position: fixed;
+        top: 3.5rem;
+        right: 3.5rem;
+        height: 6rem;
+        width: 6rem;
+        border-radius: 50%;
+        background-image: radial-gradient($nav-color-light,$nav-color-medium, $nav-color-dark);
+        z-index: 1;
+        transition: transform .8s;
+
+        @include device-style(phone_portrait) {
+            top: 2.5rem;
+        }
+    }
+
+    &__nav {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        top: 0;
+        left: 0; 
+        z-index: 2;
+        transform: translate(-100%);
+        opacity: 0;
+        transition: all .8s;
+    }
+
+    &__list {
+        @include position-center;
+    }
+
+    &__item {
+        font-size: 3rem;
+        margin-top: 1rem;
+        color: white;
+        cursor: pointer;
+        text-transform: uppercase;
+    }
+
+    &__checkbox:checked ~ &__background {
+        transform: scale(20.5);
+    }
+
+    &__checkbox:checked ~ &__nav {
+        transform: translate(0);
+        opacity: 1;
+    }
+
+    &__icon {
+        @include position-center;
+
+        &,
+        &::before,
+        &::after {
+            display: inline-block;
+            width: 3rem;
+            height: 2px;
+            background-color: black;
+        }
+
+        &::before,
+        &::after {
+            position: absolute;
+            content: "";
+            left: 0;
+            transition: transform .2s; 
+        }
+
+        &::before { top: -1rem;}
+        &::after {top: 1rem;}
+    }
+
+    &__checkbox:checked + &__button  &__icon {
+        background-color: transparent;
+
+        &::before {
+            top:0;
+            transform: rotate(135deg);
+        }
+        &::after {
+            top: 0;
+            transform: rotate(-135deg);
+        }
+    }
+
+}
+
+// @include device-style(tablet){
+    
+//     .selected {
+//         color: $nav-color-light;
+//         transform: scale(125%) !important;
+//     }
+// }
+

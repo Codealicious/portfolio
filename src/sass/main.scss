@@ -1,0 +1,17 @@
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+@import "base/animations";
+@import "base/typography.scss";
+@import "base/utilities.scss";
+@import "base/reset";
+
+@import "components/navbar";
+@import "components/profile-graphic";
+// @import "components/carousel";
+// @import "components/carousel-descriptions";
+
+@import "pages/home";
+@import "pages/about";
+// @import "pages/projects";
+// @import "pages/contact";
