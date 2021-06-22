@@ -1,0 +1,95 @@
+#project {
+
+    position: relative;
+    display: none;
+    padding: 2rem 1rem;
+
+
+     &:target {
+        width: 80vw;
+        display: block;
+        background-color: whitesmoke;
+        border-radius: 10px;
+        @include position-center;
+        z-index: 15;
+    }
+
+    & img {
+        height: 6rem;
+        width: 8rem;
+        margin: 2rem;
+    }
+
+    & ul {
+        padding-top: 2rem;
+        padding-left: 5rem;
+        font-size: 3rem;
+        font-family: 'Space Mono', monospace;
+        text-transform: uppercase;
+    }
+
+    h2 {
+        font-family: 'Staatliches', cursive;
+        letter-spacing: 2px;
+        font-size: 4rem;
+        padding-left: 5rem;
+    }
+
+    & .try-it {
+        position: absolute;
+        right: 3rem;
+        bottom: 3rem;
+        font-size: 2rem;
+        font-family: 'Staatliches', cursive;
+        padding: .5rem;
+        background-color:rgb(252,13,80);
+        border-radius: 5px;
+
+        &:active,
+        &:visited {
+            color: white;
+        }
+    }
+
+}
+
+.wrapper {
+    padding: 1rem 2rem 2rem 0;
+    text-align: right;
+}
+
+.close {
+    position: relative;
+    display: inline-block;
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    background-color: rgb(59, 201, 215);
+}
+
+.x {
+    @include position-center;
+
+    &,
+    &::before,
+    &::after {
+        display: inline-block;
+        height: 2px;
+        width: 4rem;
+        
+    }
+
+    &::before, &::after {
+        position: absolute;
+        content: "";
+        left: 0;
+        background-color: black;
+    }
+
+    &::before { 
+        transform: rotate(45deg);
+    }
+    &::after {
+        transform: rotate(-45deg);
+    }
+}

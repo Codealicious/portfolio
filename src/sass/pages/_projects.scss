@@ -1,0 +1,49 @@
+.projects {
+    
+    &__container {
+        height: 40rem;
+        width: 100%;
+        // border: 3px solid green;
+        @include position-center;
+
+        & img {
+            @include position-center;
+            height: 25rem;
+            width: 70%;
+        }
+
+        & h1 {
+            position: absolute;
+            text-align: center;
+            color: white;
+            font-size: 3.5rem;
+            font-family: 'Staatliches', cursive;
+            letter-spacing: 2px;
+            bottom: 0;
+            width: 100%;
+        }
+    }
+}
+
+.left-arrow, .right-arrow {
+    color: white;
+    font-size: 5rem;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    // border: 1px solid blue;
+}
+
+.left-arrow {
+    left: .5rem;;
+}
+
+.right-arrow {
+    right: .5rem;
+}
+
+
+
+
+

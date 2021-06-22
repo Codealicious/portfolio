@@ -30,7 +30,6 @@
 
 
     &__top, &__bottom {
-
         padding: 1rem;
 
         @include device-style(phone_portrait) {
@@ -42,7 +41,6 @@
     }
 
     &__img { 
-
         width: 20rem;
 
         @include device-style(phone_portrait) {

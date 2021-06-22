@@ -14,7 +14,7 @@
         width: 7rem;
         border-radius: 50%;
         background-color: white;
-        z-index: 3;
+        z-index: 13;
 
         @include device-style(phone_portrait) {
             top: 2rem;
@@ -29,7 +29,7 @@
         width: 6rem;
         border-radius: 50%;
         background-image: radial-gradient($nav-color-light,$nav-color-medium, $nav-color-dark);
-        z-index: 1;
+        z-index: 11;
         transition: transform .8s;
 
         @include device-style(phone_portrait) {
@@ -43,7 +43,7 @@
         width: 100%;
         top: 0;
         left: 0; 
-        z-index: 2;
+        z-index: 12;
         transform: translate(-100%);
         opacity: 0;
         transition: all .8s;

@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Navbar from "./components/navbar";
 import Home from "./pages/home";
 import About from "./pages/about";
+import Projects from "./pages/projects";
 
 function App() {
   return (
@@ -16,10 +17,10 @@ function App() {
           <Route path="/about">
             <About />
           </Route>
-          {/* <Route path="/projects">
+          <Route path="/projects">
             <Projects />
           </Route>
-          <Route path="/connect">
+          {/* <Route path="/connect">
             <Connect />
           </Route> */}
         </Switch>
