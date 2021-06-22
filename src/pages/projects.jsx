@@ -33,15 +33,17 @@ const Projects = () => {
                 index = lastIndex;
             else
                 --index; 
+                
+            setIndex(index);
           
         }else if(e.target.className === 'right-arrow') {
             if(index === lastIndex)
                 index = 1;
             else 
                 ++index;
-        }
 
-        setIndex(index);
+            setIndex(index);
+        }
     }
 
     return (
