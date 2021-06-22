@@ -2,7 +2,7 @@
 
 @mixin device-style($page-break) {
     
-    @if $page-break == phone_portrait {
+    @if $page-break == phone_landscape {
         @media (min-width: 600px) {
             @content;
         }

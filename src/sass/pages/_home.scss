@@ -8,7 +8,7 @@
     font-size: 5rem;
     color: white; 
 
-    @include device-style(phone_portrait) {
+    @include device-style(phone_landscape) {
         top: 60%;
         right: 0;
         width: fit-content;

@@ -3,7 +3,7 @@
 
     width: 100%;
 
-    @include device-style(phone_portrait) {
+    @include device-style(phone_landscape) {
         position: absolute;
         width: fit-content;
         top: 8rem;
@@ -13,7 +13,7 @@
     &__top {   
         background-color: rgb(252,13,80);
 
-        @include device-style(phone_portrait) {
+        @include device-style(phone_landscape) {
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
         }
@@ -22,7 +22,7 @@
     &__bottom {  
         background-color: rgb(59,201,215);
 
-        @include device-style(phone_portrait) {
+        @include device-style(phone_landscape) {
             border-bottom-left-radius: 10px;
             border-bottom-right-radius: 10px;
         }
@@ -32,7 +32,7 @@
     &__top, &__bottom {
         padding: 1rem;
 
-        @include device-style(phone_portrait) {
+        @include device-style(phone_landscape) {
             position: relative;
             padding: 0;
             height: 12rem;
@@ -43,7 +43,7 @@
     &__img { 
         width: 20rem;
 
-        @include device-style(phone_portrait) {
+        @include device-style(phone_landscape) {
             width: 17rem;
             @include position-center;
         }
@@ -56,7 +56,7 @@
     color: white;
     padding-top: 5rem;
 
-    @include device-style(phone_portrait) {
+    @include device-style(phone_landscape) {
         position: absolute;
         padding-top: 0;
         height: 36rem;
@@ -72,7 +72,7 @@
         font-size: 4rem;
         cursor: pointer;
 
-        @include device-style(phone_portrait) {
+        @include device-style(phone_landscape) {
             display: block;
             position: absolute;
             height: 5rem;
@@ -107,7 +107,7 @@
         font-size: 2rem;
         letter-spacing: .2rem;
 
-        @include device-style(phone_portrait) {
+        @include device-style(phone_landscape) {
             position: absolute;
             opacity: 0;
         }
@@ -126,14 +126,14 @@
     text-align: right;
     padding-right: 2rem;
 
-    @include device-style(phone_portrait) {
+    @include device-style(phone_landscape) {
        text-align: left;
        padding-right: 0;
        padding-left: 2rem;
     }
 }
 
-@include device-style(phone_portrait) {
+@include device-style(phone_landscape) {
     .list--selected {
         opacity: 1;
     }

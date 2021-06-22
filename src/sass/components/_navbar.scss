@@ -16,7 +16,7 @@
         background-color: white;
         z-index: 13;
 
-        @include device-style(phone_portrait) {
+        @include device-style(phone_landscape) {
             top: 2rem;
         }
     }
@@ -32,7 +32,7 @@
         z-index: 11;
         transition: transform .8s;
 
-        @include device-style(phone_portrait) {
+        @include device-style(phone_landscape) {
             top: 2.5rem;
         }
     }

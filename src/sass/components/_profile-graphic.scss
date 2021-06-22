@@ -6,7 +6,7 @@
         width: 100%;
         transform: translateY(-50%);
     
-        @include device-style(phone_portrait) {
+        @include device-style(phone_landscape) {
             width: 35rem;
             left: 3rem;
             transform: translate(0,-50%);
@@ -31,7 +31,7 @@
         border-radius: 50%;
         @include position-center;
 
-        @include device-style(phone_portrait){
+        @include device-style(phone_landscape){
             left: 12rem;
             width: 17rem;
             transform: translate(0, -50%);

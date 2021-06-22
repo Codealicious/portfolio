@@ -165,7 +165,6 @@ li {
       transform: translate(0, -50%); } }
 
 #project {
-  position: relative;
   display: none;
   padding: 2rem 1rem; }
   #project:target {
@@ -214,10 +213,13 @@ li {
 .close {
   position: relative;
   display: inline-block;
-  height: 6rem;
-  width: 6rem;
+  height: 4rem;
+  width: 4rem;
   border-radius: 50%;
   background-color: #3bc9d7; }
+  @media (min-width: 600px) {
+    .close {
+      top: 4rem; } }
 
 .x {
   position: absolute;
@@ -227,7 +229,7 @@ li {
   .x, .x::before, .x::after {
     display: inline-block;
     height: 2px;
-    width: 4rem; }
+    width: 2.5rem; }
   .x::before, .x::after {
     position: absolute;
     content: "";

@@ -1,6 +1,6 @@
 #project {
 
-    position: relative;
+    // used to contain position relative.
     display: none;
     padding: 2rem 1rem;
 
@@ -65,10 +65,14 @@
 .close {
     position: relative;
     display: inline-block;
-    height: 6rem;
-    width: 6rem;
+    height: 4rem;
+    width: 4rem;
     border-radius: 50%;
     background-color: rgb(59, 201, 215);
+
+    @include device-style(phone_landscape) {
+        top: 4rem;
+    }
 }
 
 .x {
@@ -79,7 +83,7 @@
     &::after {
         display: inline-block;
         height: 2px;
-        width: 4rem;
+        width: 2.5rem;
         
     }
 
