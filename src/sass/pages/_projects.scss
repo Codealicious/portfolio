@@ -3,13 +3,30 @@
     &__container {
         height: 40rem;
         width: 100%;
-        // border: 3px solid green;
         @include position-center;
+
+        @include device-style(tablet) {
+            width: 80%;
+        }
+
+        @include device-style(desktop) {
+            height: 70rem;
+        }
 
         & img {
             @include position-center;
             height: 25rem;
             width: 70%;
+
+            @include device-style(tablet) {
+                height: 45rem;
+                width: 75%;
+            }
+
+            @include device-style(desktop) {
+                height: 55rem;
+                width: 75%;
+            }
         }
 
         & h1 {
@@ -21,6 +38,10 @@
             letter-spacing: 2px;
             bottom: 0;
             width: 100%;
+
+            @include device-style(desktop) {
+                font-size: 6rem;
+            }
         }
     }
 }
@@ -30,6 +51,7 @@
     font-size: 5rem;
     text-align: center;
     position: absolute;
+    cursor: pointer;
     top: 50%;
     transform: translateY(-50%);
 }

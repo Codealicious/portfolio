@@ -1,15 +1,6 @@
 
 .img-container {
 
-    width: 100%;
-
-    @include device-style(phone_landscape) {
-        position: absolute;
-        width: fit-content;
-        top: 8rem;
-        left: 6rem;
-    }
-
     &__top {   
         background-color: rgb(252,13,80);
 
@@ -38,6 +29,11 @@
             height: 12rem;
             width: 25rem;
         }
+
+        @include device-style(tablet) {
+            height: 22rem;
+            width: 40rem;
+        }
     }
 
     &__img { 
@@ -47,9 +43,11 @@
             width: 17rem;
             @include position-center;
         }
-    }
 
-    
+        @include device-style(tablet) {
+            width: 27rem;
+        }
+    }
 }
 
 .lists {
@@ -57,17 +55,14 @@
     padding-top: 5rem;
 
     @include device-style(phone_landscape) {
-        position: absolute;
-        padding-top: 0;
-        height: 36rem;
-        width: 36rem;
-        top: 10rem;
-        left: 34rem;
+        position: relative;
+        width: 40rem;
+        margin: 0;
     }
 
     &__button {
         display: none;
-        top: 2.5rem;
+        top: 0;
         right: 1rem;
         font-size: 4rem;
         cursor: pointer;
@@ -89,10 +84,18 @@
     margin-left: 2rem;
     width: 34rem;
 
+    @include device-style(tablet) {
+        width: 40rem;
+    }
+
     & li {
         display: inline-block;
         width: 11rem;
         margin: .5rem 0;
+
+        @include device-style(tablet) {
+            width: 20rem;
+        }
     }
 
     & span {
@@ -109,12 +112,29 @@
 
         @include device-style(phone_landscape) {
             position: absolute;
+            top: 0;
+            left: 2rem;
             opacity: 0;
+        }
+
+        @include device-style(tablet) {
+            width: 47rem;
+            left: 4rem;
+            font-size: 3rem;
         }
     }
 
     &__headline {
+        
         border-bottom: 3px solid white;
+
+        @include device-style(phone_landscape) {
+            padding-top: 1rem;
+        }
+
+        @include device-style(tablet) {
+            padding-top: 0;
+        }
     }
 }
 
@@ -139,3 +159,18 @@
     }
 }
 
+
+.large-screen-wrapper {
+
+    @include device-style(phone_landscape) {
+        @include position-center;
+        display: flex;
+        width: 75%;
+    }
+
+    @include device-style(tablet) {
+        width: 80%;
+        justify-content: center;
+    }
+    
+}

@@ -14,4 +14,16 @@
         width: fit-content;
         padding-right: 5rem;
     }
+
+    @include device-style(tablet) {
+        @include position-center;
+        top: 75%;
+        font-size:7rem;
+    }
+
+    @include device-style(desktop) {
+        @include position-center;
+        top: 75%;
+        font-size:9rem;
+    }
 }

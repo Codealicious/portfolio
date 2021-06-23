@@ -1,9 +1,7 @@
 #project {
 
-    // used to contain position relative.
     display: none;
     padding: 2rem 1rem;
-
 
      &:target {
         width: 80vw;
@@ -12,12 +10,25 @@
         border-radius: 10px;
         @include position-center;
         z-index: 15;
+
+        @include device-style(phone_landscape) {
+            height: 50rem;
+        }
+
+        @include device-style(tablet) {
+            height: 60rem;
+            width: 60vw;
+        }
     }
 
     & img {
         height: 6rem;
-        width: 8rem;
+        width: 6rem;
         margin: 2rem;
+
+        @include device-style(tablet) {
+            margin-top: 5rem;
+        }
     }
 
     & ul {
@@ -60,6 +71,10 @@
 .wrapper {
     padding: 1rem 2rem 2rem 0;
     text-align: right;
+
+    @include device-style(tablet) {
+        margin-bottom: 6rem;
+    }
 }
 
 .close {

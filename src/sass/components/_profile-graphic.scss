@@ -11,6 +11,16 @@
             left: 3rem;
             transform: translate(0,-50%);
         }
+
+        @include device-style(tablet) {
+            width: 42rem;
+            @include position-center;
+            transform: translate(-50%, -70%);
+        }
+
+        @include device-style(desktop) {
+            width: 62rem;
+        }
     }
 
     &__spinning-text{
@@ -35,6 +45,18 @@
             left: 12rem;
             width: 17rem;
             transform: translate(0, -50%);
+        }
+
+        @include device-style(tablet){
+            width: 20rem;
+            @include position-center;
+            transform: translate(-50%, -91.5%);
+        }
+
+        @include device-style(desktop){
+            width: 30rem;
+            @include position-center;
+            transform: translate(-50%, -91%);
         }
     }
 }

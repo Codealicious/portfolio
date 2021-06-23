@@ -59,10 +59,30 @@
         color: white;
         cursor: pointer;
         text-transform: uppercase;
+
+        @include device-style(tablet) {
+            font-size: 4rem;
+        }
+
+        @include device-style(desktop) {
+            font-size: 5rem;
+        }
     }
 
     &__checkbox:checked ~ &__background {
         transform: scale(21);
+
+        @include device-style(phone_landscape) {
+            transform: scale(29);
+        }
+
+        @include device-style(tablet) {
+            transform: scale(34);
+        }
+
+        @include device-style(desktop) {
+            transform: scale(60);
+        }
     }
 
     &__checkbox:checked ~ &__nav {
