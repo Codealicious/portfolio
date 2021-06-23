@@ -108,10 +108,10 @@ li {
     transform: scale(21); }
     @media (min-width: 600px) {
       .navigation__checkbox:checked ~ .navigation__background {
-        transform: scale(29); } }
+        transform: scale(22.5); } }
     @media (min-width: 900px) {
       .navigation__checkbox:checked ~ .navigation__background {
-        transform: scale(34); } }
+        transform: scale(31.5); } }
     @media (min-width: 1200px) {
       .navigation__checkbox:checked ~ .navigation__background {
         transform: scale(60); } }
@@ -373,7 +373,7 @@ li {
     .lists {
       position: relative;
       width: 40rem;
-      margin: 0; } }
+      margin-top: 1rem; } }
   .lists__button {
     display: none;
     top: 0;
@@ -513,7 +513,9 @@ li {
   transform: translateY(-50%); }
 
 .left-arrow {
-  left: .5rem; }
+  padding-left: 1rem;
+  left: 0; }
 
 .right-arrow {
-  right: .5rem; }
+  padding-right: 1rem;
+  right: 0; }

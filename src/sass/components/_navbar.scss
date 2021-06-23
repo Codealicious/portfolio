@@ -73,11 +73,11 @@
         transform: scale(21);
 
         @include device-style(phone_landscape) {
-            transform: scale(29);
+            transform: scale(22.5);
         }
 
         @include device-style(tablet) {
-            transform: scale(34);
+            transform: scale(31.5);
         }
 
         @include device-style(desktop) {
@@ -129,11 +129,4 @@
 
 }
 
-// @include device-style(tablet){
-    
-//     .selected {
-//         color: $nav-color-light;
-//         transform: scale(125%) !important;
-//     }
-// }
 
